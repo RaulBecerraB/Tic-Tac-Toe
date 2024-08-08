@@ -10,29 +10,6 @@ const App = () => {
   )
 }
 
-const Square = ({markType, onSquareClick}) =>
-{
-  const [value,setValue] = useState(null)
-  let color = null
-
-  if (markType == 'X')
-  {
-    color='red'
-    console.log(color)
-  }
-  else
-  {
-    color='blue'
-    console.log(color)
-  }
-
-  return(
-    <button style={{color: color}} className='square' onClick={onSquareClick}>
-      {markType}
-    </button>
-  )
-}
-
 // in JS "export" means this function can be used outside this file
 const Board = () =>
 {
@@ -40,6 +17,11 @@ const Board = () =>
   const [xIsNext, setIsNext] = useState(true)
 
   const handleClick = (i) => {
+    
+    //Checks if the clicked square has already something inside it
+    if (squares[i]){
+      return
+    }
     //This is where Board handles the state of every Square 
     const nextSquares = squares.slice()
 
@@ -76,4 +58,24 @@ const Board = () =>
   )
 }
 
+const Square = ({markType, onSquareClick}) =>
+  {
+    const [value,setValue] = useState(null)
+    let color = null
+  
+    if (markType == 'X') {
+      color='red'
+      console.log(color)
+    }
+    else {
+      color='blue'
+      console.log(color)
+    }
+  
+    return(
+      <button style={{color: color}} className='square' onClick={onSquareClick}>
+        {markType}
+      </button>
+    )
+  }
 export default Board
