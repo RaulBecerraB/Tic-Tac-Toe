@@ -16,10 +16,20 @@ const Board = () =>
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setIsNext] = useState(true)
 
+  const winner = calculateWinner(squares)
+  let status
+  if (winner) {
+    status = ""+winner+" WINS!"
+  }
+  else {
+    status = "Next player: " + (xIsNext ? 'X' : 'O')
+  }
+
   const handleClick = (i) => {
 
     //Checks if the clicked square has already something inside it
-    if (squares[i]){
+    //OR checks if a winner is already choosen
+    if (squares[i] || calculateWinner(squares)){
       return
     }
     //This is where Board handles the state of every Square 
@@ -39,6 +49,7 @@ const Board = () =>
 
   return(
     <>
+    <div className='status'>{status}</div>
     <div className='board-row'>
       <Square markType={squares[0]} onSquareClick={() => handleClick(0)}/>
       <Square markType={squares[1]} onSquareClick={() => handleClick(1)}/>
@@ -65,11 +76,9 @@ const Square = ({markType, onSquareClick}) =>
   
     if (markType == 'X') {
       color='red'
-      console.log(color)
     }
     else {
       color='blue'
-      console.log(color)
     }
   
     return(
@@ -79,7 +88,7 @@ const Square = ({markType, onSquareClick}) =>
     )
   }
 
-const calculateWinner = () => {
+const calculateWinner = (squares) => {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
