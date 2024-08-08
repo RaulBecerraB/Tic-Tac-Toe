@@ -25,11 +25,21 @@ const Square = ({markType, onSquareClick}) =>
 const Board = () =>
 {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setIsNext] = useState(true)
 
   const handleClick = (i) => {
     //This is where Board handles the state of every Square 
     const nextSquares = squares.slice()
-    nextSquares[i] = "X";
+
+    if (xIsNext) 
+    {
+      nextSquares[i] = 'X' 
+    }
+    else
+    {
+      nextSquares[i] = 'O'
+    }
+    setIsNext(!xIsNext)
     setSquares(nextSquares)
   }
 
