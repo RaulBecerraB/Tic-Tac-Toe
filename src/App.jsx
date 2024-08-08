@@ -13,9 +13,21 @@ const App = () => {
 const Square = ({markType, onSquareClick}) =>
 {
   const [value,setValue] = useState(null)
+  let color = null
+
+  if (markType == 'X')
+  {
+    color='red'
+    console.log(color)
+  }
+  else
+  {
+    color='blue'
+    console.log(color)
+  }
 
   return(
-    <button className='square' onClick={onSquareClick}>
+    <button style={{color: color}} className='square' onClick={onSquareClick}>
       {markType}
     </button>
   )
