@@ -49,6 +49,7 @@ const Board = () =>
 
   return(
     <>
+    <div className='game'>
     <div className='status'>{status}</div>
     <div className='board-row'>
       <Square markType={squares[0]} onSquareClick={() => handleClick(0)}/>
@@ -64,6 +65,7 @@ const Board = () =>
       <Square markType={squares[6]} onSquareClick={() => handleClick(6)}/>
       <Square markType={squares[7]} onSquareClick={() => handleClick(7)}/>
       <Square markType={squares[8]} onSquareClick={() => handleClick(8)}/>
+    </div>
     </div>
     </>
   )

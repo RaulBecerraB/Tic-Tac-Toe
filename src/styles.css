@@ -81,8 +81,11 @@ body {
   margin-bottom: 10px;
 }
 .game {
-  display: flex;
+  display: grid;
   flex-direction: row;
+  align-content: center;
+  place-items: center;
+  min-height: 80vh;
 }
 
 .game-info {
