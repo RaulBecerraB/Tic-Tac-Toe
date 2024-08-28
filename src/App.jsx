@@ -15,6 +15,10 @@ const Board = () =>
     status = "Next player: " + (xIsNext ? 'X' : 'O')
   }
 
+  const resetGame = () =>{
+    setSquares(Array(9).fill(null))
+  }
+
   const handleClick = (i) => {
 
     //Checks if the clicked square has already something inside it
@@ -56,7 +60,7 @@ const Board = () =>
       <Square markType={squares[7]} onSquareClick={() => handleClick(7)}/>
       <Square markType={squares[8]} onSquareClick={() => handleClick(8)}/>
     </div>
-    <button className='button-28'>
+    <button className='button-28' onClick={resetGame}>
       RESET
     </button>
     </div>
