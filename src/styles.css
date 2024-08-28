@@ -56,10 +56,22 @@ body {
   padding: 0;
 }
 
+.board {
+  border-collapse: collapse; /* Asegura que los bordes de la tabla se comporten correctamente */
+  margin: 0 auto; /* Centra la tabla en la pantalla */
+}
+
+.board td {
+  border: 4px solid cyan; /* Bordes gruesos y de color cyan */
+  padding: 0;
+  height: 80px;
+  width: 80px;
+  text-align: center;
+}
+
 .square {
   background: #ffffff;
-  border: 1px solid #999;
-  float: left;
+  border: none;
   font-size: 32px;
   font-weight: bold;
   line-height: 34px;
@@ -69,6 +81,11 @@ body {
   padding: 0;
   text-align: center;
   width: 42px;
+  cursor: pointer; 
+}
+
+.gray-square {
+  background-color: #999;
 }
 
 .board-row:after {

@@ -44,24 +44,28 @@ const Board = () =>
   return(
     <>
     <div className='game'>
-    <div className='status'>{status}</div>
-    <div className='board-row'>
-      <Square markType={squares[0]} onSquareClick={() => handleClick(0)}/>
-      <Square markType={squares[1]} onSquareClick={() => handleClick(1)}/>
-      <Square markType={squares[2]} onSquareClick={() => handleClick(2)}/>
-    </div>
-    <div className='board-row'>
-      <Square markType={squares[3]} onSquareClick={() => handleClick(3)}/>
-      <Square markType={squares[4]} onSquareClick={() => handleClick(4)}/>
-      <Square markType={squares[5]} onSquareClick={() => handleClick(5)}/>
-    </div>
-    <div className='board-row'>
-      <Square markType={squares[6]} onSquareClick={() => handleClick(6)}/>
-      <Square markType={squares[7]} onSquareClick={() => handleClick(7)}/>
-      <Square markType={squares[8]} onSquareClick={() => handleClick(8)}/>
-    </div>
-    <Button28 text={"RESET"} onButtonClick={resetGame} />
-    </div>
+        <div className='status'>{status}</div>
+        <table className='board'>
+          <tbody>
+            <tr className='board-row'>
+              <td><Square markType={squares[0]} onSquareClick={() => handleClick(0)} /></td>
+              <td><Square markType={squares[1]} onSquareClick={() => handleClick(1)} /></td>
+              <td><Square markType={squares[2]} onSquareClick={() => handleClick(2)} /></td>
+            </tr>
+            <tr className='board-row'>
+              <td><Square markType={squares[3]} onSquareClick={() => handleClick(3)} /></td>
+              <td><Square markType={squares[4]} onSquareClick={() => handleClick(4)} /></td>
+              <td><Square markType={squares[5]} onSquareClick={() => handleClick(5)} /></td>
+            </tr>
+            <tr className='board-row'>
+              <td><Square markType={squares[6]} onSquareClick={() => handleClick(6)} /></td>
+              <td><Square markType={squares[7]} onSquareClick={() => handleClick(7)} /></td>
+              <td><Square markType={squares[8]} onSquareClick={() => handleClick(8)} /></td>
+            </tr>
+          </tbody>
+        </table>
+        <Button28 text={"RESET"} onButtonClick={resetGame} />
+      </div>
     </>
   )
 }
@@ -87,7 +91,7 @@ const Square = ({markType, onSquareClick}) =>
     }
   
     return(
-      <button style={{color: color}} className='square' onClick={onSquareClick}>
+      <button style={{color: color}} className='square square-row' onClick={onSquareClick}>
         {markType}
       </button>
     )
