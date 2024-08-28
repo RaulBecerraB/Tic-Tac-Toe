@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 // in JS "export" means this function can be used outside this file
-const Board = () =>
+const Game = () =>
 {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setIsNext] = useState(true)
@@ -117,4 +117,4 @@ const calculateWinner = (squares) => {
   return null;
 }
 
-export default Board
+export default Game
