@@ -1,15 +1,5 @@
 import { useState } from 'react'
 
-const App = () => {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <h1></h1>
-    </>
-  )
-}
-
 // in JS "export" means this function can be used outside this file
 const Board = () =>
 {
