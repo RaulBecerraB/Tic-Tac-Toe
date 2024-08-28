@@ -60,7 +60,7 @@ const Board = () =>
       <Square markType={squares[7]} onSquareClick={() => handleClick(7)}/>
       <Square markType={squares[8]} onSquareClick={() => handleClick(8)}/>
     </div>
-    <Button28 text={"RESET"} onButtonClick={() => resetGame} />
+    <Button28 text={"RESET"} onButtonClick={resetGame} />
     </div>
     </>
   )
