@@ -60,11 +60,17 @@ const Board = () =>
       <Square markType={squares[7]} onSquareClick={() => handleClick(7)}/>
       <Square markType={squares[8]} onSquareClick={() => handleClick(8)}/>
     </div>
-    <button className='button-28' onClick={resetGame}>
-      RESET
-    </button>
+    <Button28 text={"RESET"} onButtonClick={() => resetGame} />
     </div>
     </>
+  )
+}
+
+const Button28 = ({text,onButtonClick}) => {
+  return(
+    <button className='button-28' onClick={onButtonClick}>
+    {text}
+  </button>
   )
 }
 
