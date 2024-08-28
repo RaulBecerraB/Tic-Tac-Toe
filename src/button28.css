@@ -13,6 +13,7 @@
   font-weight: 600;
   line-height: normal;
   margin: 0;
+  margin-top: 25px;
   min-height: 60px;
   min-width: 0;
   outline: none;
@@ -23,7 +24,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 30%;
   will-change: transform;
 }
 
