@@ -1,5 +1,18 @@
 import { useState } from 'react'
 
+const App = () =>
+{
+  return(
+    // I´ll need to refactor the Header and footer component later into components
+    <>
+      <h1 className='header'>
+        Tic Tac Toe React SPA
+      </h1>
+      <Game />
+    </>
+  )
+}
+
 // in JS "export" means this function can be used outside this file
 const Game = () =>
 {
@@ -117,4 +130,4 @@ const calculateWinner = (squares) => {
   return null;
 }
 
-export default Game
+export default App

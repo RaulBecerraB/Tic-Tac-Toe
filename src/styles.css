@@ -56,6 +56,14 @@ body {
   padding: 0;
 }
 
+.header
+{
+  background-color: #343A46;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+}
+
 .board {
   border-collapse: collapse; /* Asegura que los bordes de la tabla se comporten correctamente */
   margin: 0 auto; /* Centra la tabla en la pantalla */
