@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Button28 } from './components/Button28'
 
 const App = () =>
 {
@@ -77,14 +78,6 @@ const Game = () =>
 
       </div>
     </>
-  )
-}
-
-const Button28 = ({text,onButtonClick}) => {
-  return(
-    <button className='button-28' onClick={onButtonClick}>
-    {text}
-  </button>
   )
 }
 
