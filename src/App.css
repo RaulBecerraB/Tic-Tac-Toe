@@ -10,13 +10,14 @@ body {
 
 h1 {
   margin-top: 0;
-  font-size: 22px;
+  font-size: 32px;
 }
 
 h2 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 32px;
   color: white;
+  padding: 2% 0% 2% 0%;
 }
 
 h3 {
@@ -53,16 +54,20 @@ ul {
 
 body {
   font-family: sans-serif;
-  margin: 20px;
+  margin: 0px;
   padding: 0;
 }
 
-.header
+.gray-bg
 {
   background-color: #343A46;
-  padding: 10px 20px;
+  padding: 20px;
   color: white;
   text-align: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  top: 0;
 }
 
 .board {
@@ -125,7 +130,6 @@ body {
   flex-direction: row;
   align-content: center;
   place-items: center;
-  min-height: 80vh;
 }
 
 .game-info {
