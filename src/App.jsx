@@ -3,7 +3,6 @@ import { useState } from 'react'
 const App = () =>
 {
   return(
-    // I´ll need to refactor the Header and footer component later into components
     <>
       <Game />
     </>
@@ -74,8 +73,11 @@ const Game = () =>
             </tr>
           </tbody>
         </table>
-        <Button28 text={"RESET"} onButtonClick={resetGame} />
+
+   
       </div>
+      <Button28 text={"RESET"} onButtonClick={resetGame} />
+        
     </>
   )
 }
@@ -107,7 +109,8 @@ const Square = ({markType, onSquareClick}) =>
     )
   }
 
-const calculateWinner = (squares) => {
+const calculateWinner = (squares) => 
+{
   const lines = [
     [0, 1, 2],
     [3, 4, 5],

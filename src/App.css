@@ -50,12 +50,17 @@ ul {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: sans-serif;
   margin: 0px;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .gray-bg
@@ -64,11 +69,12 @@ body {
   padding: 20px;
   color: white;
   text-align: center;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  position: relative;
-  top: 0;
 }
+
+.footer-class{
+  padding: 20px;
+}
+
 
 .board {
   border-collapse: collapse; /* Asegura que los bordes de la tabla se comporten correctamente */
@@ -134,4 +140,8 @@ body {
 
 .game-info {
   margin-left: 20px;
+}
+
+#root{
+  flex-grow: 1;
 }
