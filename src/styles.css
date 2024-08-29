@@ -70,7 +70,7 @@ body {
 }
 
 .board td {
-  border: 4px solid cyan; /* Bordes gruesos y de color cyan */
+  border: 12px solid #61DAFB; /* Bordes gruesos y de color cyan */
   padding: 0;
   height: 80px;
   width: 80px;
@@ -94,7 +94,7 @@ body {
 }
 .square 
 {
-  background: #ffffff;
+  background: #ffffff00;
   border: none;
   font-size: 48px;
   font-weight: bold;
