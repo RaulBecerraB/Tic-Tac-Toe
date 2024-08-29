@@ -73,11 +73,8 @@ const Game = () =>
             </tr>
           </tbody>
         </table>
-
-   
       </div>
       <Button28 text={"RESET"} onButtonClick={resetGame} />
-        
     </>
   )
 }
