@@ -5,9 +5,6 @@ const App = () =>
   return(
     // I´ll need to refactor the Header and footer component later into components
     <>
-      <h1 className='header'>
-        Tic Tac Toe React SPA
-      </h1>
       <Game />
     </>
   )
@@ -56,8 +53,8 @@ const Game = () =>
 
   return(
     <>
-    <div className='game'>
-        <div className='status'>{status}</div>
+    <div className='game' >
+        <h2 className='status'>{status}</h2>
         <table className='board'>
           <tbody>
             <tr className='board-row first-line'>
