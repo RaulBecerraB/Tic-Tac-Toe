@@ -1,13 +1,12 @@
 /* CSS */
 .button-28 {
   appearance: none;
-  background-color: #1e1e1e;
-  border: 2px solid #1A1A1A;
+  background-color: #00f2ff4c;
+  border: 2px solid #00a6ff;
   border-radius: 15px;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
-  
   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 16px;
   font-weight: 600;
@@ -34,7 +33,7 @@
 
 .button-28:hover {
   color: #fff;
-  background-color: #1A1A1A;
+  background-color: #61DAFB;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
