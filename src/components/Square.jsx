@@ -13,7 +13,7 @@ export const Square = ({markType, onSquareClick}) =>
         }
       
         return(
-          <button style={{color: color}} className='square square-row' onClick={onSquareClick}>
+          <button style={{color: color}} className='square' onClick={onSquareClick}>
             {markType}
           </button>
         )

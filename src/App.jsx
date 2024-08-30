@@ -2,6 +2,15 @@ import { useState } from 'react'
 import { Button28 } from './components/Button28'
 import { Square } from './components/Square'
 
+const redCircleSVG = <svg width="52" height="52" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="49" cy="49" r="43" stroke="#D23E3E" stroke-width="12"/>
+</svg> 
+
+const blueXSVG = <svg width="80" height="80" viewBox="0 0 139 139" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="40.3051" y="28.9914" width="98" height="15" transform="rotate(45 40.3051 28.9914)" fill="#1A75FF"/>
+<rect x="28.9913" y="98.2878" width="98" height="15" transform="rotate(-45 28.9913 98.2878)" fill="#1A75FF"/>
+</svg>
+
 const App = () =>
 {
   return(
@@ -20,14 +29,23 @@ const Game = () =>
   const winner = calculateWinner(squares)
   let status
   if (winner) {
-    status = ""+winner+" WINS!"
+    if (winner == blueXSVG)
+    {
+      status = "X WINS!"
+    }
+    else
+    {
+      status = "O WINS"
+    }
   }
   else {
     status = "Next player: " + (xIsNext ? 'X' : 'O')
   }
 
   const resetGame = () =>{
+    //fill all squares with nothing
     setSquares(Array(9).fill(null))
+    //make sure the first symbol to play is X
     setXIsNext(true)
   }
 
@@ -43,11 +61,12 @@ const Game = () =>
 
     if (xIsNext) 
     {
-      nextSquares[i] = 'X' 
+      nextSquares[i] = blueXSVG
     }
     else
     {
-      nextSquares[i] = 'O'
+      nextSquares[i] = redCircleSVG
+      
     }
     setXIsNext(!xIsNext)
     setSquares(nextSquares)

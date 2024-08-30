@@ -12,8 +12,8 @@
 .board td {
   border: 12px solid #61DAFB; /* Bordes gruesos y de color cyan */
   padding: 0;
-  height: 80px;
-  width: 80px;
+  height: 16vh;
+  width: 16vh;
   text-align: center;
 }
 /* Childs para quitar los bordes */
@@ -39,7 +39,7 @@
   font-size: 48px;
   font-weight: bold;
   line-height: 34px;
-  height: 90%;
+  height: 100%;
   padding: 0;
   text-align: center;
   width: 100%;
@@ -48,12 +48,6 @@
 
 .gray-square {
   background-color: #999;
-}
-
-.board-row:after {
-  clear: both;
-  content: '';
-  display: table;
 }
 
 .game {
