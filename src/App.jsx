@@ -27,7 +27,9 @@ const Game = () =>
   const [xIsNext, setXIsNext] = useState(true)
 
   const winner = calculateWinner(squares)
+
   let status
+  
   if (winner) {
     if (winner == blueXSVG)
     {
@@ -82,17 +84,17 @@ const Game = () =>
         <h2 className='status'>{status}</h2>
         <table className='board'>
           <tbody>
-            <tr className='board-row first-line'>
+            <tr className='first-line'>
               <td><Square markType={squares[0]} onSquareClick={() => handleClick(0)} /></td>
               <td><Square markType={squares[1]} onSquareClick={() => handleClick(1)} /></td>
               <td><Square markType={squares[2]} onSquareClick={() => handleClick(2)} /></td>
             </tr>
-            <tr className='board-row'>
+            <tr>
               <td><Square markType={squares[3]} onSquareClick={() => handleClick(3)} /></td>
               <td><Square markType={squares[4]} onSquareClick={() => handleClick(4)} /></td>
               <td><Square markType={squares[5]} onSquareClick={() => handleClick(5)} /></td>
             </tr>
-            <tr className='board-row last-line'>
+            <tr className='last-line'>
               <td><Square markType={squares[6]} onSquareClick={() => handleClick(6)} /></td>
               <td><Square markType={squares[7]} onSquareClick={() => handleClick(7)} /></td>
               <td><Square markType={squares[8]} onSquareClick={() => handleClick(8)} /></td>
