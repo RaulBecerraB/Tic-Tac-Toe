@@ -29,51 +29,39 @@ const Game = () =>
   const winner = calculateWinner(squares)
 
   let status
-  
-  if (winner) {
-    if (winner == blueXSVG)
-    {
-      status = "X WINS!"
-    }
-    else if (winner == redCircleSVG)
-    {
-      status = "O WINS!"
-    }
+
+  if (winner) 
+  {
+    status = winner == blueXSVG ? 'X WINS!':'O WINS'
   }
   //If every element in the squares array is full but there is no winner, then it is a draw
-  else if (squares.every(square => square !== null)) {
+  else if (squares.every(square => square !== null)) 
+  {
       status = "DRAW!"
   }
-  else {
+  else 
+  {
       status = "Next player: " + (xIsNext ? 'X' : 'O')
   }
 
-  const resetGame = () =>{
+  const resetGame = () =>
+  {
     //fill all squares with nothing
     setSquares(Array(9).fill(null))
     //make sure the first symbol to play is X
     setXIsNext(true)
   }
 
-  const handleClick = (i) => {
-
+  const handleClick = (i) => 
+  {
     //Checks if the clicked square has already something inside it
     //OR checks if a winner is already choosen
-    if (squares[i] || calculateWinner(squares)){
-      return
-    }
+    if (squares[i] || calculateWinner(squares)) return
     //This is where Board handles the state of every Square 
     const nextSquares = squares.slice()
 
-    if (xIsNext) 
-    {
-      nextSquares[i] = blueXSVG
-    }
-    else
-    {
-      nextSquares[i] = redCircleSVG
-      
-    }
+    nextSquares[i] = xIsNext ? blueXSVG : redCircleSVG
+
     setXIsNext(!xIsNext)
     setSquares(nextSquares)
   }
