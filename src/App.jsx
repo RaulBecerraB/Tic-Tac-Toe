@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Button28 } from './components/Button28'
+import { Square } from './components/Square'
 
 const App = () =>
 {
@@ -80,25 +81,6 @@ const Game = () =>
     </>
   )
 }
-
-const Square = ({markType, onSquareClick}) =>
-  {
-    const [value,setValue] = useState(null)
-    let color = null
-  
-    if (markType == 'X') {
-      color='red'
-    }
-    else {
-      color='blue'
-    }
-  
-    return(
-      <button style={{color: color}} className='square square-row' onClick={onSquareClick}>
-        {markType}
-      </button>
-    )
-  }
 
 const calculateWinner = (squares) => 
 {
