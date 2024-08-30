@@ -33,13 +33,17 @@ const Game = () =>
     {
       status = "X WINS!"
     }
-    else
+    else if (winner == redCircleSVG)
     {
-      status = "O WINS"
+      status = "O WINS!"
     }
   }
+  //If every element in the squares array is full but there is no winner, then it is a draw
+  else if (squares.every(square => square !== null)) {
+      status = "DRAW!"
+  }
   else {
-    status = "Next player: " + (xIsNext ? 'X' : 'O')
+      status = "Next player: " + (xIsNext ? 'X' : 'O')
   }
 
   const resetGame = () =>{
@@ -96,7 +100,6 @@ const Game = () =>
           </tbody>
         </table>
         <Button28 text={"RESET"} onButtonClick={resetGame} />
-
       </div>
     </>
   )
@@ -104,6 +107,8 @@ const Game = () =>
 
 const calculateWinner = (squares) => 
 {
+  //This function calulates wich symbol is making a line of 3
+  // and RETURNS the winner (X or O) 
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
