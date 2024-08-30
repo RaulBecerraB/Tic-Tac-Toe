@@ -23,7 +23,9 @@ const App = () =>
 // in JS "export" means this function can be used outside this file
 const Game = () =>
 {
-  const [squares, setSquares] = useState(Array(9).fill(null));
+  const returnEmptyArray = () => Array(9).fill(null)
+
+  const [squares, setSquares] = useState(returnEmptyArray());
   const [xIsNext, setXIsNext] = useState(true)
 
   const winner = calculateWinner(squares)
@@ -46,10 +48,13 @@ const Game = () =>
 
   const resetGame = () =>
   {
-    //fill all squares with nothing
-    setSquares(Array(9).fill(null))
-    //make sure the first symbol to play is X
+    emptyAllSquares()
     setXIsNext(true)
+  }
+
+  const emptyAllSquares = () =>
+  {
+    setSquares(returnEmptyArray())
   }
 
   const handleClick = (i) => 
