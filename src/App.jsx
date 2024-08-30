@@ -15,7 +15,7 @@ const App = () =>
 const Game = () =>
 {
   const [squares, setSquares] = useState(Array(9).fill(null));
-  const [xIsNext, setIsNext] = useState(true)
+  const [xIsNext, setXIsNext] = useState(true)
 
   const winner = calculateWinner(squares)
   let status
@@ -28,6 +28,7 @@ const Game = () =>
 
   const resetGame = () =>{
     setSquares(Array(9).fill(null))
+    setXIsNext(true)
   }
 
   const handleClick = (i) => {
@@ -48,7 +49,7 @@ const Game = () =>
     {
       nextSquares[i] = 'O'
     }
-    setIsNext(!xIsNext)
+    setXIsNext(!xIsNext)
     setSquares(nextSquares)
   }
 
