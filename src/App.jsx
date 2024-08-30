@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { Button28 } from './components/Button28'
 import { Square } from './components/Square'
 
-const redCircleSVG = <svg width="52" height="52" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+const iconsRadio = 50;
+const redCircleSVG = <svg width={iconsRadio} height={iconsRadio} viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="49" cy="49" r="43" stroke="#D23E3E" stroke-width="12"/>
-</svg> 
-
-const blueXSVG = <svg width="80" height="80" viewBox="0 0 139 139" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="40.3051" y="28.9914" width="98" height="15" transform="rotate(45 40.3051 28.9914)" fill="#1A75FF"/>
-<rect x="28.9913" y="98.2878" width="98" height="15" transform="rotate(-45 28.9913 98.2878)" fill="#1A75FF"/>
+</svg>
+const blueXSVG = <svg width={iconsRadio} height={iconsRadio} viewBox="0 0 81 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="11.3051" y="-0.00862122" width="98" height="15" transform="rotate(45 11.3051 -0.00862122)" fill="#1A75FF"/>
+<rect x="-0.00866699" y="69.2878" width="98" height="15" transform="rotate(-45 -0.00866699 69.2878)" fill="#1A75FF"/>
 </svg>
 
 const App = () =>

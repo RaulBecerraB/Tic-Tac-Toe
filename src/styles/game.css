@@ -12,8 +12,8 @@
 .board td {
   border: 12px solid #61DAFB; /* Bordes gruesos y de color cyan */
   padding: 0;
-  height: 16vh;
-  width: 16vh;
+  height: 14vh;
+  width: 14vh;
   text-align: center;
 }
 /* Childs para quitar los bordes */
