@@ -2,7 +2,7 @@
 
 Application preview:
 
-![](src/assets/game_preview.png)
+<img src="src/assets/game_preview.png" width="350" height="300">
 
 ## Description
 
