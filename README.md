@@ -1,6 +1,8 @@
 # Tic Tac Toe in React
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b9a40ff3-127a-4fef-bfd8-b4f5d42ec8de/deploy-status)](https://app.netlify.com/sites/tictactoespa/deploys)
+Application preview:
+
+![](src/assets/game_preview.png)
 
 ## Description
 
@@ -31,6 +33,8 @@ This project is an implementation of the classic Tic Tac Toe game developed usin
 ## Installation and Usage
 
 You can enter this link:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9a40ff3-127a-4fef-bfd8-b4f5d42ec8de/deploy-status)](https://app.netlify.com/sites/tictactoespa/deploys)
 
 https://tictactoespa.netlify.app/
 
