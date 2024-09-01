@@ -1,5 +1,7 @@
 # Tic Tac Toe in React
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b9a40ff3-127a-4fef-bfd8-b4f5d42ec8de/deploy-status)](https://app.netlify.com/sites/tictactoespa/deploys)
+
 ## Description
 
 This project is an implementation of the classic Tic Tac Toe game developed using React. The purpose of this project is to demonstrate my skills in JavaScript, HTML, CSS, and creating dynamic and interactive user interfaces (UI).
