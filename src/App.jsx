@@ -20,9 +20,10 @@ const App = () =>
   )
 }
 
-// in JS "export" means this function can be used outside this file
 const Game = () =>
 {
+  //TODO: Reorder all this code!
+
   const returnEmptyArray = () => Array(9).fill(null)
   const [squares, setSquares] = useState(returnEmptyArray());
   const [xIsNext, setXIsNext] = useState(true)
@@ -38,7 +39,6 @@ const Game = () =>
   {
     status = winner == blueXSVG ? 'X WINS!':'O WINS'
   }
-  //If every element in the squares array is full but there is no winner, then it is a draw
   else if (isDraw()) 
   {
       status = "DRAW!"
@@ -61,21 +61,15 @@ const Game = () =>
 
   const handleClick = (clickedSquare) => 
   {
-    //This is where Board handles the state of every Square
-
     if (isSquareFilled(clickedSquare) || isGameWon()) return
-
     fillClickedSquareWithNextSymbol(clickedSquare,squares)
   }
 
   const fillClickedSquareWithNextSymbol = (clickedSquare, squares) =>
   {
     const nextSquares = squares.slice()
-
     nextSquares[clickedSquare] = fillSquareWithNextSymbol(xIsNext)
-
     updateGameState(nextSquares)
-    
   }
 
   const updateGameState = (nextSquares) =>
