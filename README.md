@@ -30,6 +30,12 @@ This project is an implementation of the classic Tic Tac Toe game developed usin
 
 ## Installation and Usage
 
+You can enter this link:
+
+https://tictactoespa.netlify.app/
+
+Alternatively you can clone the entire project and run it locally:
+
 1. Clone the repository
 
 ```bash
